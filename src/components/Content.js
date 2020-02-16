@@ -10,9 +10,10 @@ const Content = props => {
   const [isLoading, setLoading] = useState(true)
   const [pageData, setPageData] = useState('')
   const params = useParams()
+  const batchURI = '/' + (params.page || 'index') + '.md'
 
   useEffect(() => {
-    fetch(rawRef + '/' + (params.page || 'index') + '.md')
+    fetch(rawRef + batchURI)
       .then(buffer => buffer.text())
       .then(markdown => {
         setPageData(markdown)
@@ -31,7 +32,7 @@ const Content = props => {
       </div>
       <div className='ui center aligned basic segment'>
         <h3 className='ui header'>현재 페이지에 잘못된 항목이 있나요?</h3>
-        <a className='ui small secondary button' href={editRef + '/index.md'} >
+        <a className='ui small secondary button' href={editRef + batchURI} >
           현재 페이지 수정하기
           <i className='right arrow icon' />
         </a>
