@@ -13,7 +13,7 @@ const App = props => {
         <Header />
 
         <Switch>
-          <Route path='/:page'>
+          <Route path='/:page+'>
             <Content />
           </Route>
           <Route path='/'>
