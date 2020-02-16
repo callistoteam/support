@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 import sfe from '../sfe'
 
-const Layout = props => {
+const Header = props => {
   return (
     <>
       <div {...sfe.displayHeader}>
@@ -11,14 +11,23 @@ const Layout = props => {
           <div className='ui inverted secondary pointing menu'>
             <Link to='/'>
               <a className='active item'>
-                Callisto Support
+                Callisto 서포트
               </a>
             </Link>
 
             <a className='item' href='https://discord.gg/jE33mfD'>
               <i className='discord icon' />
-              <span {...sfe.desktopOnly}>Discord</span>
+              <span {...sfe.desktopOnly}>디스코드</span>
             </a>
+
+            <div className='right menu'>
+              <Link to='/categories'>
+                <a className='item'>
+                  <i className='bars icon' />
+                  <span {...sfe.desktopOnly}>카테고리</span>
+                </a>
+              </Link>
+            </div>
           </div>
         </div>
       </div>
@@ -26,4 +35,4 @@ const Layout = props => {
   )
 }
 
-export default Layout
+export default Header
