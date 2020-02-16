@@ -2,18 +2,20 @@ import React, { useState, useEffect } from 'react'
 import { Markdown } from 'react-showdown'
 import fetch from 'unfetch'
 
-import { createRawRef } from '../functions'
+import sfe from '../sfe'
+
+import rawRef from '../functions/rawRef'
 
 const Main = props => {
-  const baseuri = createRawRef()
   const [isLoading, setLoading] = useState(true)
   const [pageData, setPageData] = useState('')
 
   useEffect(() => {
-    fetch(baseuri + '/index.md')
+    fetch(rawRef + '/index.md')
+      .then(buffer => buffer.text())
       .then(markdown => {
         setPageData(markdown)
-        setLoading(true)
+        setLoading(false)
       })
   }, [])
 
@@ -22,7 +24,9 @@ const Main = props => {
   }
 
   return (
-    <Markdown markup={pageData} />
+    <div className='ui basic container segment'>
+      <Markdown markup={pageData} />
+    </div>
   )
 }
 
