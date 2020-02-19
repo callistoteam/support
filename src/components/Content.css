@@ -1,0 +1,11 @@
+.ui.category {
+    height: 203px;
+    
+}
+
+.ui.category:hover {
+    transform: scale(1.05);
+    transition-duration: 0.1s;
+    cursor: pointer;
+}
+
