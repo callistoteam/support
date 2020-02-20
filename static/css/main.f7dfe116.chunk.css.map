@@ -1,1 +1,0 @@
-{"version":3,"sources":["Content.css"],"names":[],"mappings":"AAAA,aACI,YAEJ,CAEA,mBACI,6BAAsB,CAAtB,qBAAsB,CACtB,+BAAyB,CAAzB,uBAAyB,CACzB,cACJ","file":"main.f7dfe116.chunk.css","sourcesContent":[".ui.category {\r\n    height: 203px;\r\n    \r\n}\r\n\r\n.ui.category:hover {\r\n    transform: scale(1.05);\r\n    transition-duration: 0.1s;\r\n    cursor: pointer;\r\n}\r\n\r\n"]}
