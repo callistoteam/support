@@ -6,11 +6,12 @@ import sfe from '../sfe'
 
 const Cards = () => {
   return (
+  // Will be deleted
     <div {...sfe.Margin}>
       <div className='ui four column stackable grid container'>
 
         <div className='column'>
-          <Link to='/docs/notice'>
+          <Link to='/docs/notice/list'>
             <div className='ui segment category'>
               <i className='red huge icon bullhorn'/>
               <h1 className='ui header'>
@@ -21,7 +22,7 @@ const Cards = () => {
           </Link>
         </div>
         <div className='column'>
-          <Link to='/docs/wonderbot'>
+          <Link to='/docs/wonderbot/list'>
             <div className='ui segment category'>
               <img src='./wonderbot.png' style={{ width: '57.27px' }}/>
               <h1 className='ui header'>

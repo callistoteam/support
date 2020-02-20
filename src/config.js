@@ -1,7 +1,7 @@
 export default {
   repository: {
-    author: 'Seia-Soto',
-    name: 'support',
+    author: 'callistoteam',
+    name: 'docs',
     branch: 'docs'
   }
 }
